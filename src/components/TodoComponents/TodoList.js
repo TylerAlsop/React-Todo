@@ -6,7 +6,7 @@ const TodoList = props => {
 
     return (
         <div className="todo-list">
-            {props.todo.map(task => (
+            {props.todoTasks.map(task => (
                 <TaskCard 
                     key={task.id} 
                     task={task} 
