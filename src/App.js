@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 import TodoList from './components/TodoComponents/TodoList';
-// import TodoForm from './components/TodoComponents/TodoForm';
+import TodoForm from './components/TodoComponents/TodoForm';
 
 import "./components/TodoComponents/Todo.css"
 
@@ -32,19 +32,19 @@ class App extends React.Component {
     };
   }
 
-  // addTask = (e, task) => {
-  //   e.preventDefault();
+  addTask = (e, task) => {
+    e.preventDefault();
 
-  //   const newTask = {
-  //     taskName: task,
-  //     id: Date.now(),
-  //     completed: false
-  //   }
+    const newTask = {
+      taskName: task,
+      id: Date.now(),
+      completed: false
+    }
 
-  //   this.setState({
-  //     todoTasks: [...this.state.todoTasks, newTask]
-  //   });
-  // };
+    this.setState({
+      todoTasks: [...this.state.todoTasks, newTask]
+    });
+  };
 
   toggleTaskCompletion = taskId => {
     console.log(taskId)
@@ -81,7 +81,7 @@ class App extends React.Component {
       <div className="app">
         <div className="header">
           <h2 className="welcome-message">Welcome to your Todo App!</h2>
-          {/* <TodoForm addTask={this.addTask} /> */}
+          <TodoForm addTask={this.addTask} />
         </div>
         <div className="todo-list">
           <TodoList 
