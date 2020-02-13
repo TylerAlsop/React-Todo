@@ -1,12 +1,11 @@
 import React, { Component } from 'react';
-import ReactDOM from "react-dom";
 
 import TodoList from './components/TodoComponents/TodoList';
 import TodoForm from './components/TodoComponents/TodoForm';
 
 import "./components/TodoComponents/Todo.css"
 
-const todo = [
+const todoTasks = [
   {
     task: 'Hello World',
     id: 1528817077286,
@@ -21,7 +20,7 @@ const todo = [
 
 
 
-class App extends React.Component {
+class App extends Component {
   // you will need a place to store your state in this component.
   // design `App` to be the parent component of your application.
   // this component is going to take care of state, and any change handlers you need to work with your state
@@ -29,7 +28,7 @@ class App extends React.Component {
   constructor() {
     super();
     this.state = {
-      todo
+      todoTasks
     };
   }
 
@@ -37,13 +36,13 @@ class App extends React.Component {
     e.preventDefault();
 
     const newTask = {
-      task: task,
+      taskName: task,
       id: Date.now(),
       completed: false
     }
 
     this.setState({
-      todo: [...this.state.todo, newItem]
+      todoTasks: [...this.state.todoTasks, newTask]
     });
   };
 
@@ -51,7 +50,7 @@ class App extends React.Component {
     console.log(taskId)
 
     this.setState({
-      todo: this.state.todo.map(task => {
+      todoTasks: this.state.todoTasks.map(task => {
         console.log(task);
 
         if (taskId === DataTransferItem.id) {
@@ -68,11 +67,11 @@ class App extends React.Component {
 
   clearCompleted = e => {
     e.preventDefault();
-    console.log(this.state.todo);
+    console.log(this.state.todoTasks);
     this.setState({
-      todo: this.state.todo.filter(task => task.completed)
+      todoTasks: this.state.todoTasks.filter(task => task.completed)
     });
-    console.log(this.state.todo);
+    console.log(this.state.todoTasks);
   }
 
   render() {
