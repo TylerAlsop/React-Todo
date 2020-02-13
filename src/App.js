@@ -46,6 +46,26 @@ class App extends React.Component {
       todo: [...this.state.todo, newItem]
     });
   };
+
+  toggleTaskCompletion = taskId => {
+    console.log(taskId)
+
+    this.setState({
+      todo: this.state.todo.map(task => {
+        console.log(task);
+
+        if (taskId === DataTransferItem.id) {
+          return {
+            ...task,
+            completed: !task.completed
+          };
+        }
+
+        return task;
+      })
+    });
+  };
+
   
 
   render() {
