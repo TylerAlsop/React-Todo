@@ -53,10 +53,10 @@ class App extends React.Component {
       todoTasks: this.state.todoTasks.map(task => {
         console.log(task);
 
-        if (taskId === DataTransferItem.id) {
+        if (taskId === task.id) {
           return {
             ...task,
-            completed: !task.completed
+            completed: !todoTasks.completed
           };
         }
 

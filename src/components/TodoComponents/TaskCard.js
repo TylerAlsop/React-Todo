@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Task = props => {
-    console.log("Props for the TaksCard", props);
+    console.log("Props for the TaskCard", props);
 
     return (
         <div 
