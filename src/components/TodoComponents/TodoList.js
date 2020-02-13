@@ -10,7 +10,7 @@ const TodoList = props => {
                 <TaskCard 
                     key={task.id} 
                     task={task} 
-                    toggleTaskCompleted={props.toggleTaskCompleted} />
+                    toggleTaskCompletion={props.toggleTaskCompletion} />
             ))}
 
             <button className="clear-completed-button" onClick={props.clearCompleted}>

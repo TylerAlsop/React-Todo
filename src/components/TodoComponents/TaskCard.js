@@ -6,7 +6,7 @@ const Task = props => {
     return (
         <div 
             className ={`task${props.task.completed ? " completed" : ""}`}
-            onClick={() => props.toggleTaskCompleted(props.task.id)}
+            onClick={() => props.toggleTaskCompletion(props.task.id)}
         >
             <p>{props.task.task}</p>
 
