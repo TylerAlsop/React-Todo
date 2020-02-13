@@ -1,4 +1,14 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto');
+.task.completed {
+    text-decoration: line-through;
+}
+
+
+
+
+
+
+
+/* @import url('https://fonts.googleapis.com/css?family=Roboto');
 html,
 body {
   width: 100%;
@@ -93,4 +103,4 @@ input::placeholder {
 
 .clear-btn {
   margin-top: 16px;
-}
+} */

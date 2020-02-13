@@ -5,18 +5,7 @@ import TodoForm from './components/TodoComponents/TodoForm';
 
 import "./components/TodoComponents/Todo.css"
 
-const todoTasks = [
-  {
-    taskName: 'Hello World: Starter Item 1',
-    id: 1528817077286,
-    completed: false
-  },
-  {
-    taskName: 'Starter Item 2',
-    id: 1528817084358,
-    completed: false
-  }
-];
+const todoTasks = [];
 
 
 
