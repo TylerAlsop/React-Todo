@@ -69,7 +69,7 @@ class App extends React.Component {
     e.preventDefault();
     console.log(this.state.todoTasks);
     this.setState({
-      task: this.state.todoTasks.filter(task => task.completed === false)
+      todoTasks: this.state.todoTasks.filter(task => task.completed === false)
     });
     console.log(this.state.todoTasks);
   }
