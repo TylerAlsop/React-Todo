@@ -10,7 +10,7 @@ class TodoForm extends React.Component {
 
     changHandler = e => {
         this.setState({ [e.target.name]: e.target.value });
-        console.log("This is the state from the Form", this.state)
+        // console.log("This is the state from the Form", this.state)
     };
 
     submitTask = e => {
@@ -19,7 +19,7 @@ class TodoForm extends React.Component {
     };
 
     render() {
-        console.log("Rendering Form", this.state.task);
+        // console.log("Rendering Form", this.state.task);
         return (
             <form onSubmit={this.submitTask}>
                 <input type="text" name="task" onChange={this.changHandler} />

@@ -36,11 +36,11 @@ class App extends React.Component {
   };
 
   toggleTaskCompletion = taskId => {
-    console.log("toggleTaskCompletion", taskId)
+    // console.log("toggleTaskCompletion", taskId)
 
     this.setState({
       todoTasks: this.state.todoTasks.map(task => {
-        console.log(task);
+        // console.log(task);
 
         if (taskId === task.id) {
           return {
@@ -56,15 +56,15 @@ class App extends React.Component {
 
   clearCompleted = e => {
     e.preventDefault();
-    console.log(this.state.todoTasks);
+    // console.log(this.state.todoTasks);
     this.setState({
       todoTasks: this.state.todoTasks.filter(task => task.completed === false)
     });
-    console.log(this.state.todoTasks);
+    // console.log(this.state.todoTasks);
   }
 
   render() {
-    console.log("Congrats It's Rendering!");
+    // console.log("Congrats It's Rendering!");
 
     return (
       <div className="app">
