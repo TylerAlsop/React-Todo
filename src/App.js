@@ -82,6 +82,7 @@ class App extends React.Component {
       <div className="app">
         <div className="header">
           <h2 className="welcome-message">Welcome to your Todo App!</h2>
+          <TodoForm addTask={this.addTask} />
         </div>
         <div className="todo-list">
           <TodoList 
