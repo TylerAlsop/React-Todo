@@ -33,6 +33,21 @@ class App extends React.Component {
     };
   }
 
+  addTask = (e, task) => {
+    e.preventDefault();
+
+    const newTask = {
+      task: task,
+      id: Date.now(),
+      completed: false
+    }
+
+    this.setState({
+      todo: [...this.state.todo, newItem]
+    });
+  };
+  
+
   render() {
     return (
       <div>
