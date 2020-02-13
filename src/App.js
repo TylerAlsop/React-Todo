@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 import TodoList from './components/TodoComponents/TodoList';
 import TodoForm from './components/TodoComponents/TodoForm';
@@ -7,12 +7,12 @@ import "./components/TodoComponents/Todo.css"
 
 const todoTasks = [
   {
-    task: 'Hello World',
+    taskName: 'Hello World: Starter Item 1',
     id: 1528817077286,
     completed: false
   },
   {
-    task: 'Starter Item 1',
+    taskName: 'Starter Item 2',
     id: 1528817084358,
     completed: false
   }
@@ -47,7 +47,7 @@ class App extends React.Component {
   };
 
   toggleTaskCompletion = taskId => {
-    console.log(taskId)
+    console.log("toggleTaskCompletion", taskId)
 
     this.setState({
       todoTasks: this.state.todoTasks.map(task => {
@@ -69,7 +69,7 @@ class App extends React.Component {
     e.preventDefault();
     console.log(this.state.todoTasks);
     this.setState({
-      todoTasks: this.state.todoTasks.filter(task => task.completed)
+      task: this.state.todoTasks.filter(task => task.completed === false)
     });
     console.log(this.state.todoTasks);
   }
