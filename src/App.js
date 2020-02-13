@@ -76,9 +76,19 @@ class App extends React.Component {
   }
 
   render() {
+    console.log("Congrats It's Rendering!");
+
     return (
-      <div>
-        <h2>Welcome to your Todo App!</h2>
+      <div className="app">
+        <div className="header">
+          <h2 className="welcome-message">Welcome to your Todo App!</h2>
+        </div>
+        <div className="todo-list">
+          <TodoList 
+            task={this.state.task}
+            toggleTaskCompletion={this.toggleTaskCompletion}
+          />
+        </div>
       </div>
     );
   }
